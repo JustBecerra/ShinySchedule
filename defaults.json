@@ -1,0 +1,49 @@
+{
+    "monday": [{
+        "start": "09:00",
+        "end": "18:00",
+        "activity": "Work"
+    },{
+        "start": "18:00",
+        "end": "20:00",
+        "activity": "gym"
+    }],
+    "tuesday": [{
+        "start": "09:00",
+        "end": "18:00",
+        "activity": "Work"
+    },{
+        "start": "18:00",
+        "end": "20:00",
+        "activity": "gym"
+    }],
+    "wednesday": [{
+        "start": "09:00",
+        "end": "18:00",
+        "activity": "Work"
+    },{
+        "start": "18:00",
+        "end": "20:00",
+        "activity": "gym"
+    }],
+    "thursday": [{
+        "start": "09:00",
+        "end": "18:00",
+        "activity": "Work"
+    },{
+        "start": "18:00",
+        "end": "20:00",
+        "activity": "gym"
+    }],
+    "friday": [{
+        "start": "09:00",
+        "end": "18:00",
+        "activity": "Work"
+    },{
+        "start": "18:00",
+        "end": "20:00",
+        "activity": "gym"
+    }],
+    "saturday": [{}],
+    "sunday": [{}]
+}

@@ -15,10 +15,8 @@ var weekCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		defaults, _ := scheduler.LoadDefaults("defaults.json")
 		state, _ := scheduler.LoadState("extratasks.json")
-		for _, day := range days {
-			tasks := scheduler.GetDay(day, defaults, state)
-			fmt.Println(scheduler.RenderDay(day, tasks))
-		}
+		tasks := scheduler.GetWeek(days, defaults, state)
+		fmt.Println(scheduler.RenderWeek(days, tasks))
 	},
 }
 

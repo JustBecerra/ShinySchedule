@@ -12,6 +12,11 @@ type Task struct {
 	Activity string `json:"activity"`
 }
 
+type WeekTasks struct {
+	Tasks []Task `json:"tasks"`
+	Day   string `json:"day"`
+}
+
 // Defaults is keyed by weekday name, e.g. "monday"
 type Defaults map[string][]Task
 
@@ -68,5 +73,17 @@ func GetDay(day string, defaults Defaults, state State) []Task {
 	var tasks []Task
 	tasks = append(tasks, defaults[day]...)
 	tasks = append(tasks, state.Extras[day]...)
+	return tasks
+}
+
+// GetWeek merges defaults and extras for all weekdays
+func GetWeek(days []string, defaults Defaults, state State) []WeekTasks {
+	var tasks []WeekTasks
+	for _, day := range days {
+		tasks = append(tasks, WeekTasks{
+			Tasks: GetDay(day, defaults, state),
+			Day:   day,
+		})
+	}
 	return tasks
 }

@@ -1,9 +1,4 @@
 {
-    "monday": [{}],
-    "tuesday": [{}],
-    "wednesday": [{}],
-    "thursday": [{}],
-    "friday": [{}],
-    "saturday": [{}],
-    "sunday": [{}]
+    "week_start": "26266-53-2653",
+    "extras": {}
 }

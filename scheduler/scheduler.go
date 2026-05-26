@@ -41,7 +41,7 @@ func LoadState(path string) (State, error) {
 		// If the file doesn't exist yet, return a fresh state
 		if os.IsNotExist(err) {
 			return State{
-				WeekStart: time.Now().Format("2026-05-25"),
+				WeekStart: time.Now().Format("2006-01-02"),
 				Extras:    make(map[string][]Task),
 			}, nil
 		}
@@ -61,9 +61,9 @@ func SaveState(path string, s State) error {
 
 // CheckReset wipes Extras if 7 days have passed since WeekStart
 func CheckReset(s *State) {
-	weekStart, err := time.Parse("2026-05-25", s.WeekStart)
+	weekStart, err := time.Parse("2006-01-02", s.WeekStart)
 	if err != nil || time.Since(weekStart) >= 7*24*time.Hour {
-		s.WeekStart = time.Now().Format("2026-05-25")
+		s.WeekStart = time.Now().Format("2006-01-02")
 		s.Extras = make(map[string][]Task)
 	}
 }

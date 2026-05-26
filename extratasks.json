@@ -1,4 +1,17 @@
 {
-    "week_start": "26266-14-2614",
-    "extras": {}
+    "week_start": "2026-05-26",
+    "extras": {
+        "wednesday": [
+            {
+                "start": "18:30",
+                "end": "19:00",
+                "activity": "go to disco and buy yogurt"
+            },
+            {
+                "start": "20:30",
+                "end": "21:00",
+                "activity": "go to disco and buy yogurt"
+            }
+        ]
+    }
 }

@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"shinyschedule/scheduler"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -12,7 +13,7 @@ var addCmd = &cobra.Command{
 	Short: "Add a task to a day this week",
 	Args:  cobra.ExactArgs(4),
 	Run: func(cmd *cobra.Command, args []string) {
-		day, start, end, activity := args[0], args[1], args[2], args[3]
+		day, start, end, activity := strings.ToLower(args[0]), args[1], args[2], args[3]
 		state, _ := scheduler.LoadState("extratasks.json")
 		state.Extras[day] = append(state.Extras[day], scheduler.Task{
 			Start:    start,

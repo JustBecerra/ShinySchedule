@@ -1,49 +1,71 @@
 {
-    "monday": [{
-        "start": "09:00",
-        "end": "18:00",
-        "activity": "Work"
-    },{
-        "start": "18:00",
-        "end": "20:00",
-        "activity": "gym"
-    }],
-    "tuesday": [{
-        "start": "09:00",
-        "end": "18:00",
-        "activity": "Work"
-    },{
-        "start": "18:00",
-        "end": "20:00",
-        "activity": "gym"
-    }],
-    "wednesday": [{
-        "start": "09:00",
-        "end": "18:00",
-        "activity": "Work"
-    },{
-        "start": "18:00",
-        "end": "20:00",
-        "activity": "gym"
-    }],
-    "thursday": [{
-        "start": "09:00",
-        "end": "18:00",
-        "activity": "Work"
-    },{
-        "start": "18:00",
-        "end": "20:00",
-        "activity": "gym"
-    }],
-    "friday": [{
-        "start": "09:00",
-        "end": "18:00",
-        "activity": "Work"
-    },{
-        "start": "18:00",
-        "end": "20:00",
-        "activity": "gym"
-    }],
-    "saturday": [{}],
-    "sunday": [{}]
+    "friday": [
+        {
+            "start": "09:00",
+            "end": "18:00",
+            "activity": "Work"
+        },
+        {
+            "start": "18:00",
+            "end": "20:00",
+            "activity": "gym"
+        }
+    ],
+    "monday": [
+        {
+            "start": "09:00",
+            "end": "18:00",
+            "activity": "Work"
+        },
+        {
+            "start": "18:00",
+            "end": "20:00",
+            "activity": "gym"
+        }
+    ],
+    "saturday": [
+        {
+            "start": "",
+            "end": "",
+            "activity": ""
+        }
+    ],
+    "sunday": [
+        {
+            "start": "",
+            "end": "",
+            "activity": ""
+        }
+    ],
+    "thursday": [
+        {
+            "start": "09:00",
+            "end": "18:00",
+            "activity": "Work"
+        },
+        {
+            "start": "18:00",
+            "end": "20:00",
+            "activity": "gym"
+        }
+    ],
+    "tuesday": [
+        {
+            "start": "09:00",
+            "end": "18:00",
+            "activity": "Work"
+        },
+        {
+            "start": "18:00",
+            "end": "20:00",
+            "activity": "gym"
+        }
+    ],
+    "wednesday": [
+        {
+            "start": "18:00",
+            "end": "20:00",
+            "activity": "gym"
+        }
+    ]
 }

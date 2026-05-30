@@ -18,8 +18,8 @@ func RenderDay(day string, tasks []Task) string {
 	if len(tasks) == 0 {
 		sb.WriteString(" No tasks scheduled.\n")
 	} else {
-		for _, t := range tasks {
-			sb.WriteString(fmt.Sprintf(" %s - %s   %s\n", t.Start, t.End, t.Activity))
+		for i, t := range tasks {
+			sb.WriteString(fmt.Sprintf(" %d  %s - %s   %s\n", i+1, t.Start, t.End, t.Activity))
 		}
 	}
 

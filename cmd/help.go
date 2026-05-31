@@ -16,6 +16,7 @@ var helpCmd = &cobra.Command{
 		fmt.Println("  day <day> - Show the schedule for a specific day")
 		fmt.Println("  add <day> <start> <end> <activity> - Add a task to a day this week")
 		fmt.Println("  remove <day> <index> - Remove a task from a day this week")
+		fmt.Println("  reset - Remove all tasks from the schedule")
 		fmt.Println("  help - Show help for a command")
 	},
 }

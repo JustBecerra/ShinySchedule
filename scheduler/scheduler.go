@@ -124,6 +124,40 @@ func FindConflict(tasks []Task, newTask Task) (Task, bool) {
 	return Task{}, false
 }
 
+func TaskIsEmpty(t Task) bool {
+	return t.Start == "" && t.End == "" && t.Activity == ""
+}
+
+func HasDefaultTasks(d Defaults) bool {
+	for _, tasks := range d {
+		for _, t := range tasks {
+			if !TaskIsEmpty(t) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func HasExtras(s State) bool {
+	for _, tasks := range s.Extras {
+		for _, t := range tasks {
+			if !TaskIsEmpty(t) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
+func ClearDefaults(days []string) Defaults {
+	d := make(Defaults, len(days))
+	for _, day := range days {
+		d[day] = []Task{}
+	}
+	return d
+}
+
 // GetWeek merges defaults and extras for all weekdays
 func GetWeek(days []string, defaults Defaults, state State) []WeekTasks {
 	var tasks []WeekTasks
